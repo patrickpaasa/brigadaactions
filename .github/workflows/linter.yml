@@ -29,9 +29,9 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
-  test:
-    # The type of runner that the job will run on
+  test:    
     runs-on: [ubuntu-latest]
+    needs: [build]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
